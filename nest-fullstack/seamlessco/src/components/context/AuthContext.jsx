@@ -1,5 +1,4 @@
 "use client";
-
 import { createContext, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 
@@ -8,9 +7,9 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  const login = async (username, password) => {
+  const login = async (email, password) => {
     const response = await axios.post('http://localhost:3000/auth/login', {
-      username,
+      email,
       password,
     });
     const { access_token } = response.data;
@@ -19,11 +18,15 @@ export const AuthProvider = ({ children }) => {
     setUser(user);
   };
 
-  const register = async (username, password, role) => {
+  const register = async (firstname, lastname, email, dateofbirth, password, confirmpassword, role) => {
     await axios.post('http://localhost:3000/auth/register', {
-      username,
+      firstname,
+      lastname,
+      email,
+      dateofbirth,
       password,
-      role,
+      confirmpassword,
+      role
     });
   };
 

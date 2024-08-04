@@ -8,19 +8,23 @@ export class UsersController {
 
   @Post('signup')
   async signup(
-    @Body() createUserDto: { username: string; password: string; role: string },
+    @Body() createUserDto: { firstname: string; lastname: string; email: string; dateofbirth: Date; gender: string; password: string; role: string },
   ) {
     return this.usersService.create(
-      createUserDto.username,
+      createUserDto.firstname,
+      createUserDto.lastname,
+      createUserDto.email,
+      createUserDto.dateofbirth,
+      createUserDto.gender,
       createUserDto.password,
       createUserDto.role,
     );
   }
 
   @Post('signin')
-  async signin(@Body() loginUserDto: { username: string; password: string }) {
+  async signin(@Body() loginUserDto: { email: string; password: string }) {
     return this.usersService.validateUser(
-      loginUserDto.username,
+      loginUserDto.email,
       loginUserDto.password,
     );
   }

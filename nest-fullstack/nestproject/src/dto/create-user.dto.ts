@@ -1,0 +1,10 @@
+export class CreateUserDto {
+    readonly firstname: string;
+    readonly lastname: string;
+    readonly email: string;
+    readonly dateofbirth: string;
+    readonly gender: string;
+    readonly password: string;
+    readonly role: string;
+  }
+  
