@@ -32,7 +32,8 @@
 
 
 // src/users/users.controller.ts
-import { Controller, Post, Body } from '@nestjs/common';
+
+import { Controller, Post, Body, Get, Param, NotFoundException } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from '../dto/create-user.dto'; // Adjust the path according to your project structure
 
@@ -51,5 +52,25 @@ export class UsersController {
       loginUserDto.email,
       loginUserDto.password,
     );
+  }
+
+  @Get(':id')
+  async getUserById(@Param('id') id: string) {
+    console.log(`Fetching user with ID: ${id}`);
+    const user = await this.usersService.findOneById(id);
+    if (!user) {
+      throw new NotFoundException(`User with ID ${id} not found`);
+    }
+    return user;
+  }
+
+  @Get('email/:email')
+  async getUserByEmail(@Param('email') email: string) {
+    console.log(`Fetching user with email: ${email}`);
+    const user = await this.usersService.findOneByEmail(email);
+    if (!user) {
+      throw new NotFoundException(`User with email ${email} not found`);
+    }
+    return user;
   }
 }
