@@ -25,7 +25,6 @@
 // })
 // export class AuthModule {}
 
-
 import { Module } from '@nestjs/common';
 import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';

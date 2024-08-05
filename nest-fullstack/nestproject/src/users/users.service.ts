@@ -57,7 +57,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import * as argon2 from 'argon2';
-import { User, UserDocument } from '../users/schemas/user.schema';
+import { User, UserDocument } from './schemas/user.schema';
 import { CreateUserDto } from '../dto/create-user.dto';
 
 @Injectable()
@@ -69,16 +69,11 @@ export class UsersService {
   }
 
   async create(createUserDto: CreateUserDto): Promise<User> {
-    const { firstname, lastname, email, dateofbirth, gender, password, role } = createUserDto;
-    const hashedPassword = await argon2.hash(password);
+    const hashedPassword = await argon2.hash(createUserDto.password);
     const newUser = new this.userModel({
-      firstname,
-      lastname,
-      email,
-      dateofbirth: new Date(dateofbirth), // ensure the date is in the correct format
-      gender,
+      ...createUserDto,
       password: hashedPassword,
-      role,
+      dateofbirth: new Date(createUserDto.dateofbirth), // Ensure date is stored as Date object
     });
     return newUser.save();
   }
