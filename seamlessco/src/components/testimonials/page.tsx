@@ -74,8 +74,8 @@ const ReUseTestimonial = (props) => {
                             <div className="flex items-center mt-8">
                                 <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png" alt="" />
                                 <div className="ml-4">
-                                    <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName1}Leslie Alexander</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio1}Freelance React Developer</p>
+                                    <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName1}Anthony Johnson</p>
+                                    <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio1}Senior React Developer</p>
                                 </div>
                             </div>
                         </div>
@@ -120,8 +120,8 @@ const ReUseTestimonial = (props) => {
                             <div className="flex items-center mt-8">
                                 <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png" alt="" />
                                 <div className="ml-4">
-                                    <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName2}Jacob Jones</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio2}Digital Marketer</p>
+                                    <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName2}Mike Jones</p>
+                                    <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio2}Entrepreneur</p>
                                 </div>
                             </div>
                         </div>
@@ -166,8 +166,8 @@ const ReUseTestimonial = (props) => {
                             <div className="flex items-center mt-8">
                                 <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png" alt="" />
                                 <div className="ml-4">
-                                    <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName3}Jenny Wilson</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio3}Graphic Designer</p>
+                                    <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName3}William Marcus</p>
+                                    <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio3}Finance Experts</p>
                                 </div>
                             </div>
                         </div>
