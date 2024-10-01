@@ -1,4 +1,3 @@
-import Testimonial from "../../components/testimonials/page";
 import {ReUseTestimonial} from "../../components/testimonials/page";
 
  const AllTestimonials = () => {

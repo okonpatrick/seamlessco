@@ -1,11 +1,10 @@
 import Image from 'next/image';
-//will use aliases here.
-import softwaredev from '/home/patowhizzy/Documents/codes/seamlessco-project/nest-fullstack/seamlessco/public/icons/softwaredev.png'
-import financeMgt from '/home/patowhizzy/Documents/codes/seamlessco-project/nest-fullstack/seamlessco/public/icons/financeMgt.png'
-import graphicDesign from '/home/patowhizzy/Documents/codes/seamlessco-project/nest-fullstack/seamlessco/public/icons/graphicDesign.png'
-import productMgt from '/home/patowhizzy/Documents/codes/seamlessco-project/nest-fullstack/seamlessco/public/icons/productMgt.png'
-import contentCreation from '/home/patowhizzy/Documents/codes/seamlessco-project/nest-fullstack/seamlessco/public/icons/contentCreation.png'
-import webDev from '/home/patowhizzy/Documents/codes/seamlessco-project/nest-fullstack/seamlessco/public/icons/webDev.png'
+import softwaredev from '/public/icons/softwaredev.png'
+import financeMgt from '/public/icons/financeMgt.png'
+import graphicDesign from '/public/icons/graphicDesign.png'
+import productMgt from '/public/icons/productMgt.png'
+import contentCreation from '/public/icons/contentCreation.png'
+import webDev from '/public/icons/webDev.png'
 
 const services = [
   {

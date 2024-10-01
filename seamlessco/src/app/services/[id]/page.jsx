@@ -2,7 +2,7 @@
 "use client";
 import Image from "next/image"
 import { useParams } from 'next/navigation';
-import services from '/home/patowhizzy/Documents/codes/seamlessco-project/nest-fullstack/seamlessco/src/app/services/services.json';
+import services from '@/app/services/services.json';
 
 export default function ServicePage() {
     const { id } = useParams();  // Get the 'id' from the route

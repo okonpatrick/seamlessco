@@ -1,5 +1,5 @@
 //services/[id].js
-import ServicePage from '/home/patowhizzy/Documents/codes/seamlessco-project/nest-fullstack/seamlessco/src/app/services/serviceIdDisplay.jsx';
+import ServicePage from '@/app/services/serviceIdDisplay.jsx';
 import services from '../../services.json';
 
 export async function getServerSideProps(context) {

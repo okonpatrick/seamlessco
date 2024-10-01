@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-
+import Image from "next/image"
 import React from 'react';
 const Testimonial = (props) => {
   return (
@@ -72,7 +72,16 @@ const ReUseTestimonial = (props) => {
                             </div>
 
                             <div className="flex items-center mt-8">
-                                <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png" alt="" />
+
+                            <Image
+                            className="flex-shrink-0 object-cover rounded-full w-11 h-11"
+                            src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png"
+                            alt="User avatar"
+                            width={44} // Adjust as per your Tailwind CSS classes
+                            height={44}
+                            />
+
+                                {/* <Image className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png" alt="" width={11} height={11} /> */}
                                 <div className="ml-4">
                                     <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName1}Anthony Johnson</p>
                                     <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio1}Senior React Developer</p>
@@ -118,7 +127,13 @@ const ReUseTestimonial = (props) => {
                             </div>
 
                             <div className="flex items-center mt-8">
-                                <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png" alt="" />
+                                {/* <Image className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png" alt="" /> */}
+                                <Image
+                            className="flex-shrink-0 object-cover rounded-full w-11 h-11"
+                            src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png"
+                            alt="User avatar"
+                            width={44} // Adjust as per your Tailwind CSS classes
+                            height={44}/>
                                 <div className="ml-4">
                                     <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName2}Mike Jones</p>
                                     <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio2}Entrepreneur</p>
@@ -164,7 +179,13 @@ const ReUseTestimonial = (props) => {
                             </div>
 
                             <div className="flex items-center mt-8">
-                                <img className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png" alt="" />
+                            <Image
+                            className="flex-shrink-0 object-cover rounded-full w-11 h-11"
+                            src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png"
+                            alt="User avatar"
+                            width={44} // Adjust as per your Tailwind CSS classes
+                            height={44}/>
+                                {/* <Image className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png" alt="" /> */}
                                 <div className="ml-4">
                                     <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName3}William Marcus</p>
                                     <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio3}Finance Experts</p>

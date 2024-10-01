@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import services from './services.json';
-//import ServicePage from '/home/patowhizzy/Documents/codes/seamlessco-project/nest-fullstack/seamlessco/src/app/services/page.jsx';
 
 export default function ServicesGrid() {
   return (

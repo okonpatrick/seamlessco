@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from "axios";
 import Cookies from 'js-cookie';
-import ServicesGrid from "/home/patowhizzy/Documents/codes/seamlessco-project/nest-fullstack/seamlessco/src/app/services/page.jsx";
-import Loader from "/home/patowhizzy/Documents/codes/seamlessco-project/nest-fullstack/seamlessco/public/Spinner.svg";
+import ServicesGrid from "@/app/services/page.jsx";
+import Loader from "/public/Spinner.svg";
 import Image from "next/image";
+
+//should use axios to fetch.
 
 export default function UserProfile() {
   const [user, setUser] = useState(null);
