@@ -38,13 +38,14 @@ export default function UserProfile() {
     }
 
     fetchProfile();
-  }, []);
+  }, [router]);
   
   const Loader = () => (
    <div role="status" className="font-bold text-4xl ml-16 mt-16">
     <Image src={Loader}
     objectFit="contain"
-    layout="fill"/>  
+    layout="fill"
+    alt="loader image"/>  
    </div>
  );
 

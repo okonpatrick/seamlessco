@@ -1,205 +1,390 @@
+// "use client";
+// import Link from "next/link";
+// import Image from "next/image"
+// import React from 'react';
+
+// // Define the shape of your props for Testimonial
+// interface TestimonialProps {
+//   title: string;
+//   description: string;
+//   imageUrl: string;
+//   review: string;
+// }
+
+// // Define the shape of props for ReUseTestimonial
+// interface ReUseTestimonialProps {
+//   testimony1: string;
+//   testifierName1: string;
+//   testifierBio1: string;
+//   review: string;
+// }
+
+// const Testimonial:React.FC<TestimonialProps> = (props) => {
+//   return (
+//     <>
+//     <div className="text-center mt-8">
+//     <p className="text-lg font-medium text-gray-600 font-pj">What they are saying about us!</p>
+//     <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">Our happy clients say about us</h2>
+// </div>
+
+// <ReUseTestimonial
+//         testimony1="You made it so simple..."
+//         testifierName1="Anthony Johnson"
+//         testifierBio1="Senior React Developer"
+//         review={props.review}
+//       />
+//       <div className="mt-6 text-center md:mt-8 mb-4 md:order-3">
+// <Link href="/all-testimonial" title="" className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"> {props.review} </Link>
+//             </div>
+// </>
+//   )
+// }
+// export default Testimonial;
+
+// const ReUseTestimonial: React.FC<ReUseTestimonialProps> = (props) => {
+//   return (
+         
+//     <section className="py-2 bg-gray-50 sm:py-16 lg:py-4">
+//     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+//         <div className="flex flex-col items-center">
+           
+//             <div className="mt-8 text-center md:mt-16 md:order-3">
+//                 <Link href="/all-testimonial" title="" className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"> {props.review} </Link>
+//             </div>
+
+//             <div className="relative mt-10 md:mt-24 md:order-2">
+//                 <div className="absolute -inset-x-1 inset-y-16 md:-inset-x-2 md:-inset-y-6">
+//                     <div className="w-full h-full max-w-5xl mx-auto rounded-3xl opacity-30 blur-lg filter custom-gradient"></div>
+//                 </div>
+
+//                 <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
+//                     <div className="flex flex-col overflow-hidden shadow-xl">
+//                         <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+//                             <div className="flex-1">
+//                                 <div className="flex items-center">
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                 </div>
+
+//                                 <blockquote className="flex-1 mt-8">
+//                                     <p className="text-lg leading-relaxed text-gray-900 font-pj">{props.testimony1}“You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change.”</p>
+//                                 </blockquote>
+//                             </div>
+
+//                             <div className="flex items-center mt-8">
+
+//                             <Image
+//                             className="flex-shrink-0 object-cover rounded-full w-11 h-11"
+//                             src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png"
+//                             alt="User avatar"
+//                             width={44} // Adjust as per your Tailwind CSS classes
+//                             height={44}
+//                             />
+
+//                                 {/* <Image className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png" alt="" width={11} height={11} /> */}
+//                                 <div className="ml-4">
+//                                     <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName1}Anthony Johnson</p>
+//                                     <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio1}Senior React Developer</p>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+
+//                     <div className="flex flex-col overflow-hidden shadow-xl">
+//                         <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+//                             <div className="flex-1">
+//                                 <div className="flex items-center">
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                 </div>
+
+//                                 <blockquote className="flex-1 mt-8">
+//                                     <p className="text-lg leading-relaxed text-gray-900 font-pj">{props.testimony2}“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users.”</p>
+//                                 </blockquote>
+//                             </div>
+
+//                             <div className="flex items-center mt-8">
+//                                 {/* <Image className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png" alt="" /> */}
+//                                 <Image
+//                             className="flex-shrink-0 object-cover rounded-full w-11 h-11"
+//                             src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png"
+//                             alt="User avatar"
+//                             width={44} // Adjust as per your Tailwind CSS classes
+//                             height={44}/>
+//                                 <div className="ml-4">
+//                                     <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName2}Mike Jones</p>
+//                                     <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio2}Entrepreneur</p>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+
+//                     <div className="flex flex-col overflow-hidden shadow-xl">
+//                         <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+//                             <div className="flex-1">
+//                                 <div className="flex items-center">
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                     <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+//                                         <path
+//                                             d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+//                                         />
+//                                     </svg>
+//                                 </div>
+
+//                                 <blockquote className="flex-1 mt-8">
+//                                     <p className="text-lg leading-relaxed text-gray-900 font-pj">{props.testimony3}“I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.”</p>
+//                                 </blockquote>
+//                             </div>
+
+//                             <div className="flex items-center mt-8">
+//                             <Image
+//                             className="flex-shrink-0 object-cover rounded-full w-11 h-11"
+//                             src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png"
+//                             alt="User avatar"
+//                             width={44} // Adjust as per your Tailwind CSS classes
+//                             height={44}/>
+//                                 {/* <Image className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png" alt="" /> */}
+//                                 <div className="ml-4">
+//                                     <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName3}William Marcus</p>
+//                                     <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio3}Finance Experts</p>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// </section>
+   
+//   )
+// }
+
+// export {ReUseTestimonial};
+
+
+
 "use client";
 import Link from "next/link";
 import Image from "next/image"
 import React from 'react';
-const Testimonial = (props) => {
+
+// Define the shape of your props for Testimonial
+interface TestimonialProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+  review: string;
+}
+
+// Define the shape of props for ReUseTestimonial
+interface ReUseTestimonialProps {
+  testimony1: string;
+  testimony2: string;
+  testimony3: string;
+  testifierName1: string;
+  testifierName2: string;
+  testifierName3: string;
+  testifierBio1: string;
+  testifierBio2: string;
+  testifierBio3: string;
+  review: string;
+}
+
+const Testimonial: React.FC<TestimonialProps> = (props) => {
   return (
     <>
-    <div className="text-center mt-8">
-    <p className="text-lg font-medium text-gray-600 font-pj">What they are saying about us!</p>
-    <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">Our happy clients say about us</h2>
-</div>
-<ReUseTestimonial/>
-<div className="mt-6 text-center md:mt-8 mb-4 md:order-3">
-<Link href="/all-testimonial" title="" className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"> {props.review="Check all reviews"} </Link>
-            </div>
-</>
+      <div className="text-center mt-8">
+        <p className="text-lg font-medium text-gray-600 font-pj">What they are saying about us!</p>
+        <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">Our happy clients say about us</h2>
+      </div>
+
+      <ReUseTestimonial
+        testimony1="You made it so simple..."
+        testimony2="Simply the best. Better than all the rest."
+        testimony3="I cannot believe that I have got a brand new landing page after getting Omega."
+        testifierName1="Anthony Johnson"
+        testifierName2="Mike Jones"
+        testifierName3="William Marcus"
+        testifierBio1="Senior React Developer"
+        testifierBio2="Entrepreneur"
+        testifierBio3="Finance Expert"
+        review={props.review}
+      />
+      <div className="mt-6 text-center md:mt-8 mb-4 md:order-3">
+        <Link href="/all-testimonial" title="" className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"> {props.review} </Link>
+      </div>
+    </>
   )
 }
-export default Testimonial;
 
-const ReUseTestimonial = (props) => {
+const ReUseTestimonial: React.FC<ReUseTestimonialProps> = (props) => {
   return (
-         
     <section className="py-2 bg-gray-50 sm:py-16 lg:py-4">
-    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
-           
-            <div className="mt-8 text-center md:mt-16 md:order-3">
-                <Link href="/all-testimonial" title="" className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"> {props.review} </Link>
+          <div className="mt-8 text-center md:mt-16 md:order-3">
+            <Link href="/all-testimonial" title="" className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"> {props.review} </Link>
+          </div>
+
+          <div className="relative mt-10 md:mt-24 md:order-2">
+            <div className="absolute -inset-x-1 inset-y-16 md:-inset-x-2 md:-inset-y-6">
+              <div className="w-full h-full max-w-5xl mx-auto rounded-3xl opacity-30 blur-lg filter custom-gradient"></div>
             </div>
 
-            <div className="relative mt-10 md:mt-24 md:order-2">
-                <div className="absolute -inset-x-1 inset-y-16 md:-inset-x-2 md:-inset-y-6">
-                    <div className="w-full h-full max-w-5xl mx-auto rounded-3xl opacity-30 blur-lg filter custom-gradient"></div>
+            <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
+              {/* Testimonial 1 */}
+              <div className="flex flex-col overflow-hidden shadow-xl">
+                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+                  <div className="flex-1">
+                    <div className="flex items-center">
+                      {/* Star rating SVGs */}
+                    </div>
+                    <blockquote className="flex-1 mt-8">
+                      <p className="text-lg leading-relaxed text-gray-900 font-pj">{props.testimony1}</p>
+                    </blockquote>
+                  </div>
+                  <div className="flex items-center mt-8">
+                    <Image
+                      className="flex-shrink-0 object-cover rounded-full w-11 h-11"
+                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png"
+                      alt="User avatar"
+                      width={44}
+                      height={44}
+                    />
+                    <div className="ml-4">
+                      <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName1}</p>
+                      <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio1}</p>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <div className="relative grid max-w-lg grid-cols-1 gap-6 mx-auto md:max-w-none lg:gap-10 md:grid-cols-3">
-                    <div className="flex flex-col overflow-hidden shadow-xl">
-                        <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                            <div className="flex-1">
-                                <div className="flex items-center">
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                </div>
-
-                                <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">{props.testimony1}“You made it so simple. My new site is so much faster and easier to work with than my old site. I just choose the page, make the change.”</p>
-                                </blockquote>
-                            </div>
-
-                            <div className="flex items-center mt-8">
-
-                            <Image
-                            className="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                            src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png"
-                            alt="User avatar"
-                            width={44} // Adjust as per your Tailwind CSS classes
-                            height={44}
-                            />
-
-                                {/* <Image className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-1.png" alt="" width={11} height={11} /> */}
-                                <div className="ml-4">
-                                    <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName1}Anthony Johnson</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio1}Senior React Developer</p>
-                                </div>
-                            </div>
-                        </div>
+              {/* Testimonial 2 */}
+              <div className="flex flex-col overflow-hidden shadow-xl">
+                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+                  <div className="flex-1">
+                    <div className="flex items-center">
+                      {/* Star rating SVGs */}
                     </div>
-
-                    <div className="flex flex-col overflow-hidden shadow-xl">
-                        <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                            <div className="flex-1">
-                                <div className="flex items-center">
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                </div>
-
-                                <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">{props.testimony2}“Simply the best. Better than all the rest. I’d recommend this product to beginners and advanced users.”</p>
-                                </blockquote>
-                            </div>
-
-                            <div className="flex items-center mt-8">
-                                {/* <Image className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png" alt="" /> */}
-                                <Image
-                            className="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                            src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png"
-                            alt="User avatar"
-                            width={44} // Adjust as per your Tailwind CSS classes
-                            height={44}/>
-                                <div className="ml-4">
-                                    <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName2}Mike Jones</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio2}Entrepreneur</p>
-                                </div>
-                            </div>
-                        </div>
+                    <blockquote className="flex-1 mt-8">
+                      <p className="text-lg leading-relaxed text-gray-900 font-pj">{props.testimony2}</p>
+                    </blockquote>
+                  </div>
+                  <div className="flex items-center mt-8">
+                    <Image
+                      className="flex-shrink-0 object-cover rounded-full w-11 h-11"
+                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-male-2.png"
+                      alt="User avatar"
+                      width={44}
+                      height={44}
+                    />
+                    <div className="ml-4">
+                      <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName2}</p>
+                      <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio2}</p>
                     </div>
-
-                    <div className="flex flex-col overflow-hidden shadow-xl">
-                        <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
-                            <div className="flex-1">
-                                <div className="flex items-center">
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                    <svg className="w-5 h-5 text-[#FDB241]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        />
-                                    </svg>
-                                </div>
-
-                                <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">{props.testimony3}“I cannot believe that I have got a brand new landing page after getting Omega. It was super easy to edit and publish.”</p>
-                                </blockquote>
-                            </div>
-
-                            <div className="flex items-center mt-8">
-                            <Image
-                            className="flex-shrink-0 object-cover rounded-full w-11 h-11"
-                            src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png"
-                            alt="User avatar"
-                            width={44} // Adjust as per your Tailwind CSS classes
-                            height={44}/>
-                                {/* <Image className="flex-shrink-0 object-cover rounded-full w-11 h-11" src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png" alt="" /> */}
-                                <div className="ml-4">
-                                    <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName3}William Marcus</p>
-                                    <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio3}Finance Experts</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="flex flex-col overflow-hidden shadow-xl">
+                <div className="flex flex-col justify-between flex-1 p-6 bg-white lg:py-8 lg:px-7">
+                  <div className="flex-1">
+                    <div className="flex items-center">
+                      {/* Star rating SVGs */}
+                    </div>
+                    <blockquote className="flex-1 mt-8">
+                      <p className="text-lg leading-relaxed text-gray-900 font-pj">{props.testimony3}</p>
+                    </blockquote>
+                  </div>
+                  <div className="flex items-center mt-8">
+                    <Image
+                      className="flex-shrink-0 object-cover rounded-full w-11 h-11"
+                      src="https://cdn.rareblocks.xyz/collection/clarity/images/testimonial/4/avatar-female.png"
+                      alt="User avatar"
+                      width={44}
+                      height={44}
+                    />
+                    <div className="ml-4">
+                      <p className="text-base font-bold text-gray-900 font-pj">{props.testifierName3}</p>
+                      <p className="mt-0.5 text-sm font-pj text-gray-600">{props.testifierBio3}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-   
+      </div>
+    </section>
   )
 }
 
-export {ReUseTestimonial};
+export default Testimonial;
+export { ReUseTestimonial };

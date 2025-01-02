@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-
+import Link from "next/link";
 export default function AuthForm({ isLogin }) {
   const [formData, setFormData] = useState({
     email: '',
@@ -173,6 +173,16 @@ export default function AuthForm({ isLogin }) {
       {/* {isLogin ? 'Login' : 'Sign Up'} */}
       {loading ? 'Sending...' : isLogin ? 'Login' : 'Sign Up'}
     </button>
+    {!isLogin && (
+      <>
+       <button
+      type="submit"
+      className="w-full text-black bg-gray-300 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"    >
+     Already have an account? <Link href="/auth/signin" className="underline">Login</Link>
+    </button>
+      </>
+    )}
   </form>
  );
 }
+                                                          

@@ -11,7 +11,7 @@ export default function ServicePage() {
     if (matchingServices.length === 0) return <div>Service not found</div>;
 
     return (
-        <div className='grid grid-cols-4'>
+        <div className='grid lg:grid-cols-4 grid-cols-1'>
         
         {matchingServices.map((service, index) => (
           <div key={index} className="service-card">
